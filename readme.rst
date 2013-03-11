@@ -5,7 +5,7 @@ OS X Icons
 ``create_iconset.sh`` creates a Icon Set by a given image file.
 
 This is a naive approach, don't use this in production.  See Apples
-`High Resolution Guidelines` for more informations.
+`High Resolution Guidelines`_ for more informations.
 
 Usage::
 
