@@ -2,7 +2,7 @@
 OS X Icons
 ==========
 
-``create_iconset.sh`` creates a Icon Set by a given image file.
+``create_iconset.sh`` creates an Icon Set by a given image file.
 
 This is a naive approach, don't use this in production.  See Apples
 `High Resolution Guidelines`_ for more informations.
@@ -17,7 +17,7 @@ resolutions.
 After that add the Icon Set to your XCode-Project and set the key *Icon file*
 of the Info.plist to the Icon Set name (without extension).
 
-Or create a icon by yourself::
+Or create an icon by yourself::
 
    $ iconutil -c icns AIconSet.icns
 
