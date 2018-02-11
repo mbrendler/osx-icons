@@ -4,6 +4,9 @@
 #
 # Informations about icons can be found here:
 # https://developer.apple.com/library/mac/#documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html
+#
+# Contents.json:
+# https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/AppIconType.html
 
 set -e
 
