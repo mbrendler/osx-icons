@@ -68,7 +68,7 @@ if [ "$TARGET" = ios ] ; then
   add_image_with_size 76 2
   add_image_with_size 167
   add_image_with_size 1024
-  cp ios_contents.json "$ICON_SET/Contents.json"
+  cp ios-contents.json "$ICON_SET/Contents.json"
 else
   # needed sizes: 16, 32, 128, 256, 512 pixels
   # names: icon_16x16.png, ...

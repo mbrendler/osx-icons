@@ -1,15 +1,15 @@
-==========
-OS X Icons
-==========
+===========
+macOS Icons
+===========
 
-``create_iconset.sh`` creates an Icon Set by a given image file.
+``create-iconset.sh`` creates an Icon Set by a given image file.
 
 This is a naive approach, don't use this in production.  See Apples
 `High Resolution Guidelines`_ for more informations.
 
-Usage::
+Create IconSet::
 
-   $ ./create_iconset.sh AIconSet a_image.png
+   $ ./create-iconset.sh AIconSet image.png
 
 This will create the Icon Set (AIconSet.iconset) with PNG files of the needed
 resolutions.
@@ -22,5 +22,14 @@ Or create an icon by yourself::
    $ iconutil -c icns AIconSet.icns
 
 
-
 .. _High Resolution Guidelines: https://developer.apple.com/library/mac/#documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html
+
+
+=========
+iOS Icons
+=========
+
+Create AppIconSet::
+
+   # create appiconset for iOS
+   $ ./create-iconset.sh AppIcon image.png
