@@ -8,19 +8,21 @@
 set -e
 
 TARGET=macos
+EXTENSION=.iconset
 
-if [ "$1" = '--iphone' ]; then
-  TARGET=iphone
+if [ "$1" = '--ios' ]; then
+  TARGET=ios
+  EXTENSION=.appiconset
   shift
 fi
 
 ICON_NAME=$1
-ICON_SET="$ICON_NAME".iconset
+ICON_SET="$ICON_NAME$EXTENSION"
 
 IN_IMAGE=$2
 
 function usage () {
-  echo "usage: $0 [--iphone] ICON_NAME IN_IMAGE"
+  echo "usage: $0 [--ios] ICON_NAME IN_IMAGE"
   exit
 }
 
@@ -52,12 +54,18 @@ function add_image_with_size() {
 
 mkdir "$ICON_SET"
 
-if [ "$TARGET" = iphone ] ; then
+if [ "$TARGET" = ios ] ; then
   for SIZE in 20 29 40 60 ; do
     add_image_with_size $SIZE 2
     add_image_with_size $SIZE 3
   done
+  add_image_with_size 20
+  add_image_with_size 29
+  add_image_with_size 76
+  add_image_with_size 76 2
+  add_image_with_size 167
   add_image_with_size 1024
+  cp ios_contents.json "$ICON_SET/Contents.json"
 else
   # needed sizes: 16, 32, 128, 256, 512 pixels
   # names: icon_16x16.png, ...
